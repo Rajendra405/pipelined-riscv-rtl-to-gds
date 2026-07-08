@@ -1,0 +1,82 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : riscv
+Version: V-2023.12-SP4
+Date   : Wed Jul  8 16:07:56 2026
+****************************************
+
+
+Library(s) Used:
+
+    saed32rvt_tt1p05v25c (File: /data/pdk/pdk32nm/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_tt1p05v25c.db)
+
+
+Operating Conditions: tt1p05v25c   Library: saed32rvt_tt1p05v25c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+riscv                  35000             saed32rvt_tt1p05v25c
+controller             8000              saed32rvt_tt1p05v25c
+datapath               35000             saed32rvt_tt1p05v25c
+hazard                 8000              saed32rvt_tt1p05v25c
+maindec                ForQA             saed32rvt_tt1p05v25c
+aludec                 ForQA             saed32rvt_tt1p05v25c
+floprc_WIDTH10         ForQA             saed32rvt_tt1p05v25c
+flopr_WIDTH4           ForQA             saed32rvt_tt1p05v25c
+flopr_WIDTH3           ForQA             saed32rvt_tt1p05v25c
+mux2_WIDTH32_1         8000              saed32rvt_tt1p05v25c
+flopenr_WIDTH32        8000              saed32rvt_tt1p05v25c
+adder_1                8000              saed32rvt_tt1p05v25c
+flopenrc_WIDTH96       8000              saed32rvt_tt1p05v25c
+regfile                16000             saed32rvt_tt1p05v25c
+extend                 ForQA             saed32rvt_tt1p05v25c
+floprc_WIDTH175        8000              saed32rvt_tt1p05v25c
+mux3_WIDTH32_2         ForQA             saed32rvt_tt1p05v25c
+alu                    8000              saed32rvt_tt1p05v25c
+adder_0                8000              saed32rvt_tt1p05v25c
+flopr_WIDTH101_1       8000              saed32rvt_tt1p05v25c
+flopr_WIDTH101_0       8000              saed32rvt_tt1p05v25c
+mux3_WIDTH32_0         ForQA             saed32rvt_tt1p05v25c
+mux3_WIDTH32_1         ForQA             saed32rvt_tt1p05v25c
+mux2_WIDTH32_0         8000              saed32rvt_tt1p05v25c
+
+
+Global Operating Voltage = 1.05 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =   3.4639 mW   (90%)
+  Net Switching Power  = 366.3480 uW   (10%)
+                         ---------
+Total Dynamic Power    =   3.8302 mW  (100%)
+
+Cell Leakage Power     = 595.8696 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network  4.5698e+03            0.0000            0.0000        4.5698e+03  ( 103.25%)  i
+register       -1.2989e+03           62.0799        2.2414e+08        -1.0127e+03
+                                                                                 ( -22.88%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational    192.9841          304.2680        3.7173e+08          868.9792  (  19.63%)
+--------------------------------------------------------------------------------------------------
+Total          3.4639e+03 uW       366.3479 uW     5.9587e+08 pW     4.4261e+03 uW
+1
