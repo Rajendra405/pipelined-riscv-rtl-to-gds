@@ -28,6 +28,16 @@ A 5-stage pipelined RV32I core with a hazard unit that handles data forwarding, 
 
 The critical path runs from a memory-stage pipeline register, through the hazard unit's forward-select logic, into the forwarding mux and ALU source mux, through the ALU, and back to the PC-update logic — the classic pipeline hazard-resolution path. During CTS, the negative-edge register file and positive-edge pipeline registers are balanced on their respective clock edges, which is a direct realization of the mixed-edge design.
 
+## Physical Design
+
+The core taken through the backend flow — power planning and the final placed-and-routed layout.
+
+![Power plan](powerplan.jpeg)
+*VDD/VSS ring and mesh built around the core, before cell placement.*
+
+![Routed core](routed_core.jpeg)
+*Standard cells (cyan) with signal routing (pink) and the power mesh — the finished layout.*
+
 ## Repository
 
 - `rtl/` — the full design (core, testbench, and behavioral memories) for simulation, and a synthesis-clean view with the testbench and memories removed
