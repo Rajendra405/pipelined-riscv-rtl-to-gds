@@ -1,0 +1,125 @@
+ 
+****************************************
+check_design summary:
+Version:     V-2023.12-SP4
+Date:        Wed Jul  8 16:07:02 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     34
+    Unconnected ports (LINT-28)                                     3
+    Feedthrough (LINT-29)                                          19
+    Shorted outputs (LINT-31)                                      12
+
+Cells                                                              37
+    Cells do not drive (LINT-1)                                     4
+    Connected to power or ground (LINT-32)                         32
+    Nets connected to multiple pins on same cell (LINT-33)          1
+--------------------------------------------------------------------------------
+
+Warning: In design 'hazard', cell 'B_5' does not drive any nets. (LINT-1)
+Warning: In design 'hazard', cell 'B_6' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'B_9' does not drive any nets. (LINT-1)
+Warning: In design 'alu', cell 'B_10' does not drive any nets. (LINT-1)
+Warning: In design 'datapath', port 'MemWriteM' is not connected to any nets. (LINT-28)
+Warning: In design 'maindec', port 'op[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'maindec', port 'op[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'hazard', input port 'PCSrcE' is connected directly to output port 'FlushD'. (LINT-29)
+Warning: In design 'extend', input port 'instr[31]' is connected directly to output port 'immext[20]'. (LINT-29)
+Warning: In design 'extend', input port 'instr[31]' is connected directly to output port 'immext[21]'. (LINT-29)
+Warning: In design 'extend', input port 'instr[31]' is connected directly to output port 'immext[22]'. (LINT-29)
+Warning: In design 'extend', input port 'instr[31]' is connected directly to output port 'immext[23]'. (LINT-29)
+Warning: In design 'extend', input port 'instr[31]' is connected directly to output port 'immext[24]'. (LINT-29)
+Warning: In design 'extend', input port 'instr[31]' is connected directly to output port 'immext[25]'. (LINT-29)
+Warning: In design 'extend', input port 'instr[31]' is connected directly to output port 'immext[26]'. (LINT-29)
+Warning: In design 'extend', input port 'instr[31]' is connected directly to output port 'immext[27]'. (LINT-29)
+Warning: In design 'extend', input port 'instr[31]' is connected directly to output port 'immext[28]'. (LINT-29)
+Warning: In design 'extend', input port 'instr[31]' is connected directly to output port 'immext[29]'. (LINT-29)
+Warning: In design 'extend', input port 'instr[31]' is connected directly to output port 'immext[30]'. (LINT-29)
+Warning: In design 'extend', input port 'instr[31]' is connected directly to output port 'immext[31]'. (LINT-29)
+Warning: In design 'extend', input port 'instr[30]' is connected directly to output port 'immext[10]'. (LINT-29)
+Warning: In design 'extend', input port 'instr[29]' is connected directly to output port 'immext[9]'. (LINT-29)
+Warning: In design 'extend', input port 'instr[28]' is connected directly to output port 'immext[8]'. (LINT-29)
+Warning: In design 'extend', input port 'instr[27]' is connected directly to output port 'immext[7]'. (LINT-29)
+Warning: In design 'extend', input port 'instr[26]' is connected directly to output port 'immext[6]'. (LINT-29)
+Warning: In design 'extend', input port 'instr[25]' is connected directly to output port 'immext[5]'. (LINT-29)
+Warning: In design 'hazard', output port 'StallF' is connected directly to output port 'StallD'. (LINT-31)
+Warning: In design 'extend', output port 'immext[31]' is connected directly to output port 'immext[20]'. (LINT-31)
+Warning: In design 'extend', output port 'immext[31]' is connected directly to output port 'immext[21]'. (LINT-31)
+Warning: In design 'extend', output port 'immext[31]' is connected directly to output port 'immext[22]'. (LINT-31)
+Warning: In design 'extend', output port 'immext[31]' is connected directly to output port 'immext[23]'. (LINT-31)
+Warning: In design 'extend', output port 'immext[31]' is connected directly to output port 'immext[24]'. (LINT-31)
+Warning: In design 'extend', output port 'immext[31]' is connected directly to output port 'immext[25]'. (LINT-31)
+Warning: In design 'extend', output port 'immext[31]' is connected directly to output port 'immext[26]'. (LINT-31)
+Warning: In design 'extend', output port 'immext[31]' is connected directly to output port 'immext[27]'. (LINT-31)
+Warning: In design 'extend', output port 'immext[31]' is connected directly to output port 'immext[28]'. (LINT-31)
+Warning: In design 'extend', output port 'immext[31]' is connected directly to output port 'immext[29]'. (LINT-31)
+Warning: In design 'extend', output port 'immext[31]' is connected directly to output port 'immext[30]'. (LINT-31)
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[31]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[30]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[29]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[28]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[27]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[26]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[25]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[24]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[23]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[22]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[21]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[20]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[19]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[18]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[17]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[16]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[15]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[14]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[13]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[12]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[11]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[10]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[9]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[8]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[7]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[6]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[5]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[4]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[3]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[2]' is connected to logic 1. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[1]' is connected to logic 0. 
+Warning: In design 'datapath', a pin on submodule 'pcadd' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'b[0]' is connected to logic 0. 
+Warning: In design 'datapath', the same net is connected to more than one pin on submodule 'pcadd'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'b[31]', 'b[30]'', 'b[29]', 'b[28]', 'b[27]', 'b[26]', 'b[25]', 'b[24]', 'b[23]', 'b[22]', 'b[21]', 'b[20]', 'b[19]', 'b[18]', 'b[17]', 'b[16]', 'b[15]', 'b[14]', 'b[13]', 'b[12]', 'b[11]', 'b[10]', 'b[9]', 'b[8]', 'b[7]', 'b[6]', 'b[5]', 'b[4]', 'b[3]', 'b[1]', 'b[0]'.
+1
