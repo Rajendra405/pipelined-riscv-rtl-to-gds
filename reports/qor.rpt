@@ -1,0 +1,85 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'riscv' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : qor
+Design : riscv
+Version: V-2023.12-SP4
+Date   : Wed Jul  8 16:07:56 2026
+****************************************
+
+
+  Timing Path Group 'clk'
+  -----------------------------------
+  Levels of Logic:              31.00
+  Critical Path Length:          3.14
+  Critical Path Slack:           0.00
+  Critical Path Clk Period:      3.30
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:       -586.78
+  Total Hold Violation:    -153121.75
+  No. of Hold Violations:     1453.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:         23
+  Hierarchical Port Count:       2444
+  Leaf Cell Count:               7150
+  Buf/Inv Cell Count:            1131
+  Buf Cell Count:                 149
+  Inv Cell Count:                 982
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:      5638
+  Sequential Cell Count:         1512
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:    13438.118213
+  Noncombinational Area: 10259.285271
+  Buf/Inv Area:           1781.549448
+  Total Buffer Area:           399.51
+  Total Inverter Area:        1382.04
+  Macro/Black Box Area:      0.000000
+  Net Area:               8847.036782
+  -----------------------------------
+  Cell Area:             23697.403484
+  Design Area:           32544.440266
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:          7316
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: ws4.trg.vlsiexpert.in
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    0.44
+  Logic Optimization:                  3.21
+  Mapping Optimization:               32.82
+  -----------------------------------------
+  Overall Compile Time:               51.10
+  Overall Compile Wall Clock Time:    51.55
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 586.78  TNS: 153121.75  Number of Violating Paths: 1453
+
+  --------------------------------------------------------------------
+
+
+1
