@@ -1,0 +1,66 @@
+ 
+****************************************
+Report : area
+Design : riscv
+Version: V-2023.12-SP4
+Date   : Wed Jul  8 16:07:56 2026
+****************************************
+
+Library(s) Used:
+
+    saed32rvt_tt1p05v25c (File: /data/pdk/pdk32nm/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_tt1p05v25c.db)
+
+Number of ports:                         2607
+Number of nets:                          9632
+Number of cells:                         7173
+Number of combinational cells:           5638
+Number of sequential cells:              1512
+Number of macros/black boxes:               0
+Number of buf/inv:                       1131
+Number of references:                       3
+
+Combinational area:              13438.118213
+Buf/Inv area:                     1781.549448
+Noncombinational area:           10259.285271
+Macro/Black Box area:                0.000000
+Net Interconnect area:            8847.036782
+
+Total cell area:                 23697.403484
+Total area:                      32544.440266
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ------------------------------ 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-   Black-
+                                  Total       Total    national    national    boxes   Design
+--------------------------------  ----------  -------  ----------  ----------  ------  ----------------
+riscv                             23697.4035    100.0      0.0000      0.0000  0.0000  riscv
+c                                   209.6688      0.9      2.7956      0.0000  0.0000  controller
+c/ad                                 16.7735      0.1     16.7735      0.0000  0.0000  aludec
+c/controlregE                       108.5195      0.5     37.3592     71.1603  0.0000  floprc_WIDTH10
+c/controlregM                        33.5470      0.1      5.0829     28.4641  0.0000  flopr_WIDTH4
+c/controlregW                        26.4310      0.1      5.0829     21.3481  0.0000  flopr_WIDTH3
+c/md                                 21.6022      0.1     21.6022      0.0000  0.0000  maindec
+dp                                23271.9664     98.2     93.0167      0.0000  0.0000  datapath
+dp/alu                             3110.7226     13.1   3110.7226      0.0000  0.0000  alu
+dp/branchadd                        579.9566      2.4    579.9566      0.0000  0.0000  adder_0
+dp/ext                               48.2874      0.2     48.2874      0.0000  0.0000  extend
+dp/faemux                           146.6411      0.6    146.6411      0.0000  0.0000  mux3_WIDTH32_2
+dp/fbemux                           152.7405      0.6    152.7405      0.0000  0.0000  mux3_WIDTH32_1
+dp/pcadd                            201.2821      0.8    201.2821      0.0000  0.0000  adder_1
+dp/pcmux                            253.6357      1.1    253.6357      0.0000  0.0000  mux2_WIDTH32_1
+dp/pcreg                            431.5365      1.8    203.8235    227.7130  0.0000  flopenr_WIDTH32
+dp/regD                            1197.0183      5.1    528.1112    668.9070  0.0000  flopenrc_WIDTH96
+dp/regE                            1872.2789      7.9    624.9401   1247.3388  0.0000  floprc_WIDTH175
+dp/regM                             847.5703      3.6    128.3427    719.2275  0.0000  flopr_WIDTH101_1
+dp/regW                             849.8575      3.6    129.6134    720.2441  0.0000  flopr_WIDTH101_0
+dp/resultmux                        193.9119      0.8    193.9119      0.0000  0.0000  mux3_WIDTH32_0
+dp/rf                             13038.6040     55.0   6483.7218   6554.8823  0.0000  regfile
+dp/srcbmux                          254.9064      1.1    254.9064      0.0000  0.0000  mux2_WIDTH32_0
+hu                                  215.7683      0.9    215.7683      0.0000  0.0000  hazard
+--------------------------------  ----------  -------  ----------  ----------  ------  ----------------
+Total                                                  13438.1182  10259.2853  0.0000
+
+1
