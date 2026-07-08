@@ -1,0 +1,870 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 10
+        -max_paths 10
+Design : riscv
+Version: V-2023.12-SP4
+Date   : Wed Jul  8 16:07:56 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: tt1p05v25c   Library: saed32rvt_tt1p05v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: dp/regM/q_reg[33]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dp/pcreg/q_reg[14]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv              35000                 saed32rvt_tt1p05v25c
+  hazard             8000                  saed32rvt_tt1p05v25c
+  mux3_WIDTH32_1     ForQA                 saed32rvt_tt1p05v25c
+  datapath           35000                 saed32rvt_tt1p05v25c
+  mux2_WIDTH32_0     8000                  saed32rvt_tt1p05v25c
+  alu                8000                  saed32rvt_tt1p05v25c
+  mux2_WIDTH32_1     8000                  saed32rvt_tt1p05v25c
+  flopenr_WIDTH32    8000                  saed32rvt_tt1p05v25c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dp/regM/q_reg[33]/CLK (DFFARX1_RVT)      0.00 #     0.00 r
+  dp/regM/q_reg[33]/Q (DFFARX1_RVT)        0.15       0.15 f
+  dp/regM/q[33] (flopr_WIDTH101_1)         0.00       0.15 f
+  dp/RdM[1] (datapath)                     0.00       0.15 f
+  hu/RdM[1] (hazard)                       0.00       0.15 f
+  hu/U39/Y (XOR2X1_RVT)                    0.18       0.33 r
+  hu/U29/Y (OR3X2_RVT)                     0.05       0.38 r
+  hu/U11/Y (IBUFFX16_RVT)                  0.06       0.45 f
+  hu/U48/Y (AND4X1_RVT)                    0.10       0.55 f
+  hu/U10/Y (NOR4X1_RVT)                    0.12       0.67 r
+  hu/ForwardBE[0] (hazard)                 0.00       0.67 r
+  dp/ForwardBE[0] (datapath)               0.00       0.67 r
+  dp/fbemux/s[0] (mux3_WIDTH32_1)          0.00       0.67 r
+  dp/fbemux/U2/Y (AND2X1_RVT)              0.05       0.71 r
+  dp/fbemux/U10/Y (NBUFFX16_RVT)           0.08       0.79 r
+  dp/fbemux/U7/Y (AO21X2_RVT)              0.10       0.89 r
+  dp/fbemux/y[3] (mux3_WIDTH32_1)          0.00       0.89 r
+  dp/srcbmux/d0[3] (mux2_WIDTH32_0)        0.00       0.89 r
+  dp/srcbmux/U18/Y (IBUFFX16_RVT)          0.06       0.95 f
+  dp/srcbmux/U19/Y (OAI21X2_RVT)           0.11       1.06 r
+  dp/srcbmux/y[3] (mux2_WIDTH32_0)         0.00       1.06 r
+  dp/alu/b[3] (alu)                        0.00       1.06 r
+  dp/alu/U805/Y (XOR2X1_RVT)               0.10       1.17 f
+  dp/alu/U810/Y (NAND2X0_RVT)              0.08       1.25 r
+  dp/alu/U220/Y (OAI21X2_RVT)              0.08       1.33 f
+  dp/alu/U195/Y (AOI21X1_RVT)              0.11       1.44 r
+  dp/alu/U232/Y (OAI21X2_RVT)              0.07       1.52 f
+  dp/alu/U182/Y (NBUFFX4_RVT)              0.05       1.57 f
+  dp/alu/U132/Y (AO21X1_RVT)               0.13       1.70 f
+  dp/alu/U693/Y (XOR2X1_RVT)               0.16       1.86 r
+  dp/alu/U1126/Y (OAI22X1_RVT)             0.06       1.92 f
+  dp/alu/U29/Y (OR2X1_RVT)                 0.10       2.02 f
+  dp/alu/U288/Y (OR3X1_RVT)                0.11       2.13 f
+  dp/alu/U1128/Y (OR3X2_RVT)               0.11       2.24 f
+  dp/alu/U135/Y (OR4X2_RVT)                0.13       2.36 f
+  dp/alu/U130/Y (OR4X2_RVT)                0.12       2.49 f
+  dp/alu/U138/Y (NOR4X1_RVT)               0.11       2.60 r
+  dp/alu/zero (alu)                        0.00       2.60 r
+  dp/ZeroE (datapath)                      0.00       2.60 r
+  c/ZeroE (controller)                     0.00       2.60 r
+  c/U1/Y (AO21X2_RVT)                      0.06       2.66 r
+  c/PCSrcE (controller)                    0.00       2.66 r
+  dp/PCSrcE (datapath)                     0.00       2.66 r
+  dp/pcmux/s (mux2_WIDTH32_1)              0.00       2.66 r
+  dp/pcmux/U76/Y (NBUFFX4_RVT)             0.05       2.71 r
+  dp/pcmux/U3/Y (INVX1_RVT)                0.04       2.76 f
+  dp/pcmux/U4/Y (AO22X1_RVT)               0.10       2.85 f
+  dp/pcmux/y[14] (mux2_WIDTH32_1)          0.00       2.85 f
+  dp/pcreg/d[14] (flopenr_WIDTH32)         0.00       2.85 f
+  dp/pcreg/U11/Y (AND2X1_RVT)              0.12       2.97 f
+  dp/pcreg/U12/Y (OR2X1_RVT)               0.11       3.08 f
+  dp/pcreg/q_reg[14]/D (DFFARX1_RVT)       0.06       3.14 f
+  data arrival time                                   3.14
+
+  clock clk (rise edge)                    3.30       3.30
+  clock network delay (ideal)              0.00       3.30
+  clock uncertainty                       -0.15       3.15
+  dp/pcreg/q_reg[14]/CLK (DFFARX1_RVT)     0.00       3.15 r
+  library setup time                      -0.01       3.14
+  data required time                                  3.14
+  -----------------------------------------------------------
+  data required time                                  3.14
+  data arrival time                                  -3.14
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: dp/regM/q_reg[33]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dp/regE/q_reg[73]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv              35000                 saed32rvt_tt1p05v25c
+  hazard             8000                  saed32rvt_tt1p05v25c
+  mux3_WIDTH32_1     ForQA                 saed32rvt_tt1p05v25c
+  datapath           35000                 saed32rvt_tt1p05v25c
+  alu                8000                  saed32rvt_tt1p05v25c
+  floprc_WIDTH175    8000                  saed32rvt_tt1p05v25c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dp/regM/q_reg[33]/CLK (DFFARX1_RVT)      0.00 #     0.00 r
+  dp/regM/q_reg[33]/Q (DFFARX1_RVT)        0.15       0.15 f
+  dp/regM/q[33] (flopr_WIDTH101_1)         0.00       0.15 f
+  dp/RdM[1] (datapath)                     0.00       0.15 f
+  hu/RdM[1] (hazard)                       0.00       0.15 f
+  hu/U39/Y (XOR2X1_RVT)                    0.18       0.33 r
+  hu/U29/Y (OR3X2_RVT)                     0.05       0.38 r
+  hu/U11/Y (IBUFFX16_RVT)                  0.06       0.45 f
+  hu/U48/Y (AND4X1_RVT)                    0.10       0.55 f
+  hu/U10/Y (NOR4X1_RVT)                    0.12       0.67 r
+  hu/ForwardBE[0] (hazard)                 0.00       0.67 r
+  dp/ForwardBE[0] (datapath)               0.00       0.67 r
+  dp/fbemux/s[0] (mux3_WIDTH32_1)          0.00       0.67 r
+  dp/fbemux/U2/Y (AND2X1_RVT)              0.05       0.71 r
+  dp/fbemux/U10/Y (NBUFFX16_RVT)           0.08       0.79 r
+  dp/fbemux/U30/Y (AO222X1_RVT)            0.12       0.91 r
+  dp/fbemux/y[0] (mux3_WIDTH32_1)          0.00       0.91 r
+  dp/srcbmux/d0[0] (mux2_WIDTH32_0)        0.00       0.91 r
+  dp/srcbmux/U23/Y (AO21X2_RVT)            0.07       0.99 r
+  dp/srcbmux/y[0] (mux2_WIDTH32_0)         0.00       0.99 r
+  dp/alu/b[0] (alu)                        0.00       0.99 r
+  dp/alu/U127/Y (INVX1_RVT)                0.09       1.07 f
+  dp/alu/U120/Y (OR2X2_RVT)                0.20       1.27 f
+  dp/alu/U425/Y (NBUFFX4_RVT)              0.11       1.38 f
+  dp/alu/U864/Y (NOR2X0_RVT)               0.17       1.55 r
+  dp/alu/U498/Y (NOR4X1_RVT)               0.10       1.66 f
+  dp/alu/U217/Y (AO21X2_RVT)               0.14       1.80 f
+  dp/alu/U175/Y (AO22X1_RVT)               0.11       1.90 f
+  dp/alu/U142/Y (OR2X4_RVT)                0.11       2.01 f
+  dp/alu/U513/Y (NOR2X0_RVT)               0.11       2.12 r
+  dp/alu/U370/Y (OR3X2_RVT)                0.05       2.18 r
+  dp/alu/U278/Y (OR2X1_RVT)                0.04       2.22 r
+  dp/alu/U154/Y (OR4X1_RVT)                0.07       2.29 r
+  dp/alu/U167/Y (OR4X1_RVT)                0.08       2.37 r
+  dp/alu/U138/Y (NOR4X1_RVT)               0.07       2.44 f
+  dp/alu/zero (alu)                        0.00       2.44 f
+  dp/ZeroE (datapath)                      0.00       2.44 f
+  c/ZeroE (controller)                     0.00       2.44 f
+  c/U1/Y (AO21X2_RVT)                      0.10       2.55 f
+  c/PCSrcE (controller)                    0.00       2.55 f
+  hu/PCSrcE (hazard)                       0.00       2.55 f
+  hu/U16/Y (OR2X4_RVT)                     0.15       2.70 f
+  hu/FlushE (hazard)                       0.00       2.70 f
+  dp/FlushE (datapath)                     0.00       2.70 f
+  dp/regE/clear (floprc_WIDTH175)          0.00       2.70 f
+  dp/regE/U7/Y (NBUFFX4_RVT)               0.13       2.83 f
+  dp/regE/U65/Y (OR2X1_RVT)                0.24       3.08 f
+  dp/regE/q_reg[73]/D (DFFASX1_RVT)        0.06       3.13 f
+  data arrival time                                   3.13
+
+  clock clk (rise edge)                    3.30       3.30
+  clock network delay (ideal)              0.00       3.30
+  clock uncertainty                       -0.15       3.15
+  dp/regE/q_reg[73]/CLK (DFFASX1_RVT)      0.00       3.15 r
+  library setup time                      -0.02       3.13
+  data required time                                  3.13
+  -----------------------------------------------------------
+  data required time                                  3.13
+  data arrival time                                  -3.13
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: dp/regM/q_reg[33]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dp/regE/q_reg[73]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv              35000                 saed32rvt_tt1p05v25c
+  hazard             8000                  saed32rvt_tt1p05v25c
+  mux3_WIDTH32_1     ForQA                 saed32rvt_tt1p05v25c
+  datapath           35000                 saed32rvt_tt1p05v25c
+  alu                8000                  saed32rvt_tt1p05v25c
+  floprc_WIDTH175    8000                  saed32rvt_tt1p05v25c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dp/regM/q_reg[33]/CLK (DFFARX1_RVT)      0.00 #     0.00 r
+  dp/regM/q_reg[33]/Q (DFFARX1_RVT)        0.15       0.15 f
+  dp/regM/q[33] (flopr_WIDTH101_1)         0.00       0.15 f
+  dp/RdM[1] (datapath)                     0.00       0.15 f
+  hu/RdM[1] (hazard)                       0.00       0.15 f
+  hu/U39/Y (XOR2X1_RVT)                    0.18       0.33 r
+  hu/U29/Y (OR3X2_RVT)                     0.05       0.38 r
+  hu/U11/Y (IBUFFX16_RVT)                  0.06       0.45 f
+  hu/U48/Y (AND4X1_RVT)                    0.10       0.55 f
+  hu/U10/Y (NOR4X1_RVT)                    0.12       0.67 r
+  hu/ForwardBE[0] (hazard)                 0.00       0.67 r
+  dp/ForwardBE[0] (datapath)               0.00       0.67 r
+  dp/fbemux/s[0] (mux3_WIDTH32_1)          0.00       0.67 r
+  dp/fbemux/U2/Y (AND2X1_RVT)              0.05       0.71 r
+  dp/fbemux/U10/Y (NBUFFX16_RVT)           0.08       0.79 r
+  dp/fbemux/U30/Y (AO222X1_RVT)            0.12       0.91 r
+  dp/fbemux/y[0] (mux3_WIDTH32_1)          0.00       0.91 r
+  dp/srcbmux/d0[0] (mux2_WIDTH32_0)        0.00       0.91 r
+  dp/srcbmux/U23/Y (AO21X2_RVT)            0.07       0.99 r
+  dp/srcbmux/y[0] (mux2_WIDTH32_0)         0.00       0.99 r
+  dp/alu/b[0] (alu)                        0.00       0.99 r
+  dp/alu/U127/Y (INVX1_RVT)                0.09       1.07 f
+  dp/alu/U120/Y (OR2X2_RVT)                0.20       1.27 f
+  dp/alu/U425/Y (NBUFFX4_RVT)              0.11       1.38 f
+  dp/alu/U864/Y (NOR2X0_RVT)               0.17       1.55 r
+  dp/alu/U498/Y (NOR4X1_RVT)               0.10       1.66 f
+  dp/alu/U217/Y (AO21X2_RVT)               0.14       1.80 f
+  dp/alu/U175/Y (AO22X1_RVT)               0.11       1.90 f
+  dp/alu/U142/Y (OR2X4_RVT)                0.11       2.01 f
+  dp/alu/U513/Y (NOR2X0_RVT)               0.11       2.12 r
+  dp/alu/U370/Y (OR3X2_RVT)                0.05       2.18 r
+  dp/alu/U278/Y (OR2X1_RVT)                0.04       2.22 r
+  dp/alu/U154/Y (OR4X1_RVT)                0.07       2.29 r
+  dp/alu/U167/Y (OR4X1_RVT)                0.08       2.37 r
+  dp/alu/U138/Y (NOR4X1_RVT)               0.07       2.44 f
+  dp/alu/zero (alu)                        0.00       2.44 f
+  dp/ZeroE (datapath)                      0.00       2.44 f
+  c/ZeroE (controller)                     0.00       2.44 f
+  c/U1/Y (AO21X2_RVT)                      0.10       2.55 f
+  c/PCSrcE (controller)                    0.00       2.55 f
+  hu/PCSrcE (hazard)                       0.00       2.55 f
+  hu/U16/Y (OR2X4_RVT)                     0.15       2.70 f
+  hu/FlushE (hazard)                       0.00       2.70 f
+  dp/FlushE (datapath)                     0.00       2.70 f
+  dp/regE/clear (floprc_WIDTH175)          0.00       2.70 f
+  dp/regE/U7/Y (NBUFFX4_RVT)               0.13       2.83 f
+  dp/regE/U65/Y (OR2X1_RVT)                0.24       3.08 f
+  dp/regE/q_reg[73]/D (DFFASX1_RVT)        0.06       3.13 f
+  data arrival time                                   3.13
+
+  clock clk (rise edge)                    3.30       3.30
+  clock network delay (ideal)              0.00       3.30
+  clock uncertainty                       -0.15       3.15
+  dp/regE/q_reg[73]/CLK (DFFASX1_RVT)      0.00       3.15 r
+  library setup time                      -0.02       3.13
+  data required time                                  3.13
+  -----------------------------------------------------------
+  data required time                                  3.13
+  data arrival time                                  -3.13
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: dp/regM/q_reg[34]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dp/regE/q_reg[73]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv              35000                 saed32rvt_tt1p05v25c
+  hazard             8000                  saed32rvt_tt1p05v25c
+  mux3_WIDTH32_1     ForQA                 saed32rvt_tt1p05v25c
+  datapath           35000                 saed32rvt_tt1p05v25c
+  mux2_WIDTH32_0     8000                  saed32rvt_tt1p05v25c
+  alu                8000                  saed32rvt_tt1p05v25c
+  floprc_WIDTH175    8000                  saed32rvt_tt1p05v25c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dp/regM/q_reg[34]/CLK (DFFARX1_RVT)      0.00 #     0.00 r
+  dp/regM/q_reg[34]/Q (DFFARX1_RVT)        0.15       0.15 f
+  dp/regM/q[34] (flopr_WIDTH101_1)         0.00       0.15 f
+  dp/RdM[2] (datapath)                     0.00       0.15 f
+  hu/RdM[2] (hazard)                       0.00       0.15 f
+  hu/U46/Y (XOR2X1_RVT)                    0.20       0.35 f
+  hu/U38/Y (OR3X1_RVT)                     0.12       0.47 f
+  hu/U12/Y (NOR3X0_RVT)                    0.11       0.58 r
+  hu/ForwardBE[1] (hazard)                 0.00       0.58 r
+  dp/ForwardBE[1] (datapath)               0.00       0.58 r
+  dp/fbemux/s[1] (mux3_WIDTH32_1)          0.00       0.58 r
+  dp/fbemux/U8/Y (NBUFFX16_RVT)            0.08       0.66 r
+  dp/fbemux/U3/Y (NOR2X2_RVT)              0.08       0.74 f
+  dp/fbemux/U6/Y (AO22X1_RVT)              0.10       0.84 f
+  dp/fbemux/U7/Y (AO21X2_RVT)              0.07       0.91 f
+  dp/fbemux/y[3] (mux3_WIDTH32_1)          0.00       0.91 f
+  dp/srcbmux/d0[3] (mux2_WIDTH32_0)        0.00       0.91 f
+  dp/srcbmux/U18/Y (IBUFFX16_RVT)          0.00       0.91 r
+  dp/srcbmux/U19/Y (OAI21X2_RVT)           0.08       1.00 f
+  dp/srcbmux/y[3] (mux2_WIDTH32_0)         0.00       1.00 f
+  dp/alu/b[3] (alu)                        0.00       1.00 f
+  dp/alu/U121/Y (NBUFFX2_RVT)              0.13       1.13 f
+  dp/alu/U221/Y (OR2X4_RVT)                0.21       1.34 f
+  dp/alu/U164/Y (OR2X4_RVT)                0.27       1.61 f
+  dp/alu/U929/Y (NOR2X0_RVT)               0.24       1.85 r
+  dp/alu/U930/Y (NOR2X2_RVT)               0.09       1.94 f
+  dp/alu/U31/Y (OR2X1_RVT)                 0.13       2.07 f
+  dp/alu/U483/Y (NAND3X0_RVT)              0.07       2.14 r
+  dp/alu/U181/Y (OR4X1_RVT)                0.08       2.22 r
+  dp/alu/U194/Y (OR4X1_RVT)                0.08       2.30 r
+  dp/alu/U167/Y (OR4X1_RVT)                0.07       2.37 r
+  dp/alu/U138/Y (NOR4X1_RVT)               0.07       2.44 f
+  dp/alu/zero (alu)                        0.00       2.44 f
+  dp/ZeroE (datapath)                      0.00       2.44 f
+  c/ZeroE (controller)                     0.00       2.44 f
+  c/U1/Y (AO21X2_RVT)                      0.10       2.55 f
+  c/PCSrcE (controller)                    0.00       2.55 f
+  hu/PCSrcE (hazard)                       0.00       2.55 f
+  hu/U16/Y (OR2X4_RVT)                     0.15       2.70 f
+  hu/FlushE (hazard)                       0.00       2.70 f
+  dp/FlushE (datapath)                     0.00       2.70 f
+  dp/regE/clear (floprc_WIDTH175)          0.00       2.70 f
+  dp/regE/U7/Y (NBUFFX4_RVT)               0.13       2.83 f
+  dp/regE/U65/Y (OR2X1_RVT)                0.24       3.08 f
+  dp/regE/q_reg[73]/D (DFFASX1_RVT)        0.06       3.13 f
+  data arrival time                                   3.13
+
+  clock clk (rise edge)                    3.30       3.30
+  clock network delay (ideal)              0.00       3.30
+  clock uncertainty                       -0.15       3.15
+  dp/regE/q_reg[73]/CLK (DFFASX1_RVT)      0.00       3.15 r
+  library setup time                      -0.02       3.13
+  data required time                                  3.13
+  -----------------------------------------------------------
+  data required time                                  3.13
+  data arrival time                                  -3.13
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: dp/regE/q_reg[73]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dp/pcreg/q_reg[14]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv              35000                 saed32rvt_tt1p05v25c
+  hazard             8000                  saed32rvt_tt1p05v25c
+  mux3_WIDTH32_1     ForQA                 saed32rvt_tt1p05v25c
+  datapath           35000                 saed32rvt_tt1p05v25c
+  mux2_WIDTH32_0     8000                  saed32rvt_tt1p05v25c
+  alu                8000                  saed32rvt_tt1p05v25c
+  mux2_WIDTH32_1     8000                  saed32rvt_tt1p05v25c
+  flopenr_WIDTH32    8000                  saed32rvt_tt1p05v25c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dp/regE/q_reg[73]/CLK (DFFASX1_RVT)      0.00 #     0.00 r
+  dp/regE/q_reg[73]/QN (DFFASX1_RVT)       0.14       0.14 f
+  dp/regE/q[73] (floprc_WIDTH175)          0.00       0.14 f
+  dp/Rs2E[4] (datapath)                    0.00       0.14 f
+  hu/Rs2E[4] (hazard)                      0.00       0.14 f
+  hu/U40/Y (XOR2X1_RVT)                    0.19       0.33 r
+  hu/U29/Y (OR3X2_RVT)                     0.06       0.38 r
+  hu/U11/Y (IBUFFX16_RVT)                  0.06       0.45 f
+  hu/U48/Y (AND4X1_RVT)                    0.10       0.55 f
+  hu/U10/Y (NOR4X1_RVT)                    0.12       0.66 r
+  hu/ForwardBE[0] (hazard)                 0.00       0.66 r
+  dp/ForwardBE[0] (datapath)               0.00       0.66 r
+  dp/fbemux/s[0] (mux3_WIDTH32_1)          0.00       0.66 r
+  dp/fbemux/U2/Y (AND2X1_RVT)              0.05       0.71 r
+  dp/fbemux/U10/Y (NBUFFX16_RVT)           0.08       0.79 r
+  dp/fbemux/U7/Y (AO21X2_RVT)              0.10       0.89 r
+  dp/fbemux/y[3] (mux3_WIDTH32_1)          0.00       0.89 r
+  dp/srcbmux/d0[3] (mux2_WIDTH32_0)        0.00       0.89 r
+  dp/srcbmux/U18/Y (IBUFFX16_RVT)          0.06       0.95 f
+  dp/srcbmux/U19/Y (OAI21X2_RVT)           0.11       1.06 r
+  dp/srcbmux/y[3] (mux2_WIDTH32_0)         0.00       1.06 r
+  dp/alu/b[3] (alu)                        0.00       1.06 r
+  dp/alu/U805/Y (XOR2X1_RVT)               0.10       1.17 f
+  dp/alu/U810/Y (NAND2X0_RVT)              0.08       1.25 r
+  dp/alu/U220/Y (OAI21X2_RVT)              0.08       1.33 f
+  dp/alu/U195/Y (AOI21X1_RVT)              0.11       1.44 r
+  dp/alu/U232/Y (OAI21X2_RVT)              0.07       1.52 f
+  dp/alu/U182/Y (NBUFFX4_RVT)              0.05       1.57 f
+  dp/alu/U132/Y (AO21X1_RVT)               0.13       1.70 f
+  dp/alu/U693/Y (XOR2X1_RVT)               0.16       1.85 r
+  dp/alu/U1126/Y (OAI22X1_RVT)             0.06       1.92 f
+  dp/alu/U29/Y (OR2X1_RVT)                 0.10       2.02 f
+  dp/alu/U288/Y (OR3X1_RVT)                0.11       2.12 f
+  dp/alu/U1128/Y (OR3X2_RVT)               0.11       2.24 f
+  dp/alu/U135/Y (OR4X2_RVT)                0.13       2.36 f
+  dp/alu/U130/Y (OR4X2_RVT)                0.12       2.49 f
+  dp/alu/U138/Y (NOR4X1_RVT)               0.11       2.60 r
+  dp/alu/zero (alu)                        0.00       2.60 r
+  dp/ZeroE (datapath)                      0.00       2.60 r
+  c/ZeroE (controller)                     0.00       2.60 r
+  c/U1/Y (AO21X2_RVT)                      0.06       2.66 r
+  c/PCSrcE (controller)                    0.00       2.66 r
+  dp/PCSrcE (datapath)                     0.00       2.66 r
+  dp/pcmux/s (mux2_WIDTH32_1)              0.00       2.66 r
+  dp/pcmux/U76/Y (NBUFFX4_RVT)             0.05       2.71 r
+  dp/pcmux/U3/Y (INVX1_RVT)                0.04       2.76 f
+  dp/pcmux/U4/Y (AO22X1_RVT)               0.10       2.85 f
+  dp/pcmux/y[14] (mux2_WIDTH32_1)          0.00       2.85 f
+  dp/pcreg/d[14] (flopenr_WIDTH32)         0.00       2.85 f
+  dp/pcreg/U11/Y (AND2X1_RVT)              0.12       2.97 f
+  dp/pcreg/U12/Y (OR2X1_RVT)               0.11       3.08 f
+  dp/pcreg/q_reg[14]/D (DFFARX1_RVT)       0.06       3.14 f
+  data arrival time                                   3.14
+
+  clock clk (rise edge)                    3.30       3.30
+  clock network delay (ideal)              0.00       3.30
+  clock uncertainty                       -0.15       3.15
+  dp/pcreg/q_reg[14]/CLK (DFFARX1_RVT)     0.00       3.15 r
+  library setup time                      -0.01       3.14
+  data required time                                  3.14
+  -----------------------------------------------------------
+  data required time                                  3.14
+  data arrival time                                  -3.14
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: dp/regM/q_reg[33]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dp/pcreg/q_reg[14]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv              35000                 saed32rvt_tt1p05v25c
+  hazard             8000                  saed32rvt_tt1p05v25c
+  mux3_WIDTH32_1     ForQA                 saed32rvt_tt1p05v25c
+  datapath           35000                 saed32rvt_tt1p05v25c
+  mux2_WIDTH32_0     8000                  saed32rvt_tt1p05v25c
+  alu                8000                  saed32rvt_tt1p05v25c
+  mux2_WIDTH32_1     8000                  saed32rvt_tt1p05v25c
+  flopenr_WIDTH32    8000                  saed32rvt_tt1p05v25c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dp/regM/q_reg[33]/CLK (DFFARX1_RVT)      0.00 #     0.00 r
+  dp/regM/q_reg[33]/Q (DFFARX1_RVT)        0.15       0.15 f
+  dp/regM/q[33] (flopr_WIDTH101_1)         0.00       0.15 f
+  dp/RdM[1] (datapath)                     0.00       0.15 f
+  hu/RdM[1] (hazard)                       0.00       0.15 f
+  hu/U39/Y (XOR2X1_RVT)                    0.18       0.33 r
+  hu/U29/Y (OR3X2_RVT)                     0.05       0.38 r
+  hu/U11/Y (IBUFFX16_RVT)                  0.06       0.45 f
+  hu/U48/Y (AND4X1_RVT)                    0.10       0.55 f
+  hu/U10/Y (NOR4X1_RVT)                    0.12       0.67 r
+  hu/ForwardBE[0] (hazard)                 0.00       0.67 r
+  dp/ForwardBE[0] (datapath)               0.00       0.67 r
+  dp/fbemux/s[0] (mux3_WIDTH32_1)          0.00       0.67 r
+  dp/fbemux/U2/Y (AND2X1_RVT)              0.05       0.71 r
+  dp/fbemux/U10/Y (NBUFFX16_RVT)           0.08       0.79 r
+  dp/fbemux/U7/Y (AO21X2_RVT)              0.10       0.89 r
+  dp/fbemux/y[3] (mux3_WIDTH32_1)          0.00       0.89 r
+  dp/srcbmux/d0[3] (mux2_WIDTH32_0)        0.00       0.89 r
+  dp/srcbmux/U18/Y (IBUFFX16_RVT)          0.06       0.95 f
+  dp/srcbmux/U19/Y (OAI21X2_RVT)           0.11       1.06 r
+  dp/srcbmux/y[3] (mux2_WIDTH32_0)         0.00       1.06 r
+  dp/alu/b[3] (alu)                        0.00       1.06 r
+  dp/alu/U805/Y (XOR2X1_RVT)               0.10       1.17 f
+  dp/alu/U118/Y (NOR2X0_RVT)               0.13       1.30 r
+  dp/alu/U206/Y (NOR2X2_RVT)               0.07       1.36 f
+  dp/alu/U507/Y (NAND2X0_RVT)              0.07       1.44 r
+  dp/alu/U232/Y (OAI21X2_RVT)              0.08       1.52 f
+  dp/alu/U182/Y (NBUFFX4_RVT)              0.05       1.57 f
+  dp/alu/U132/Y (AO21X1_RVT)               0.13       1.70 f
+  dp/alu/U693/Y (XOR2X1_RVT)               0.16       1.85 r
+  dp/alu/U1126/Y (OAI22X1_RVT)             0.06       1.92 f
+  dp/alu/U29/Y (OR2X1_RVT)                 0.10       2.02 f
+  dp/alu/U288/Y (OR3X1_RVT)                0.11       2.12 f
+  dp/alu/U1128/Y (OR3X2_RVT)               0.11       2.24 f
+  dp/alu/U135/Y (OR4X2_RVT)                0.13       2.36 f
+  dp/alu/U130/Y (OR4X2_RVT)                0.12       2.49 f
+  dp/alu/U138/Y (NOR4X1_RVT)               0.11       2.60 r
+  dp/alu/zero (alu)                        0.00       2.60 r
+  dp/ZeroE (datapath)                      0.00       2.60 r
+  c/ZeroE (controller)                     0.00       2.60 r
+  c/U1/Y (AO21X2_RVT)                      0.06       2.66 r
+  c/PCSrcE (controller)                    0.00       2.66 r
+  dp/PCSrcE (datapath)                     0.00       2.66 r
+  dp/pcmux/s (mux2_WIDTH32_1)              0.00       2.66 r
+  dp/pcmux/U76/Y (NBUFFX4_RVT)             0.05       2.71 r
+  dp/pcmux/U3/Y (INVX1_RVT)                0.04       2.76 f
+  dp/pcmux/U4/Y (AO22X1_RVT)               0.10       2.85 f
+  dp/pcmux/y[14] (mux2_WIDTH32_1)          0.00       2.85 f
+  dp/pcreg/d[14] (flopenr_WIDTH32)         0.00       2.85 f
+  dp/pcreg/U11/Y (AND2X1_RVT)              0.12       2.97 f
+  dp/pcreg/U12/Y (OR2X1_RVT)               0.11       3.08 f
+  dp/pcreg/q_reg[14]/D (DFFARX1_RVT)       0.06       3.14 f
+  data arrival time                                   3.14
+
+  clock clk (rise edge)                    3.30       3.30
+  clock network delay (ideal)              0.00       3.30
+  clock uncertainty                       -0.15       3.15
+  dp/pcreg/q_reg[14]/CLK (DFFARX1_RVT)     0.00       3.15 r
+  library setup time                      -0.01       3.14
+  data required time                                  3.14
+  -----------------------------------------------------------
+  data required time                                  3.14
+  data arrival time                                  -3.14
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: dp/regE/q_reg[73]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dp/regE/q_reg[73]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv              35000                 saed32rvt_tt1p05v25c
+  hazard             8000                  saed32rvt_tt1p05v25c
+  mux3_WIDTH32_1     ForQA                 saed32rvt_tt1p05v25c
+  datapath           35000                 saed32rvt_tt1p05v25c
+  alu                8000                  saed32rvt_tt1p05v25c
+  floprc_WIDTH175    8000                  saed32rvt_tt1p05v25c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dp/regE/q_reg[73]/CLK (DFFASX1_RVT)      0.00 #     0.00 r
+  dp/regE/q_reg[73]/QN (DFFASX1_RVT)       0.14       0.14 f
+  dp/regE/q[73] (floprc_WIDTH175)          0.00       0.14 f
+  dp/Rs2E[4] (datapath)                    0.00       0.14 f
+  hu/Rs2E[4] (hazard)                      0.00       0.14 f
+  hu/U40/Y (XOR2X1_RVT)                    0.19       0.33 r
+  hu/U29/Y (OR3X2_RVT)                     0.06       0.38 r
+  hu/U11/Y (IBUFFX16_RVT)                  0.06       0.45 f
+  hu/U48/Y (AND4X1_RVT)                    0.10       0.55 f
+  hu/U10/Y (NOR4X1_RVT)                    0.12       0.66 r
+  hu/ForwardBE[0] (hazard)                 0.00       0.66 r
+  dp/ForwardBE[0] (datapath)               0.00       0.66 r
+  dp/fbemux/s[0] (mux3_WIDTH32_1)          0.00       0.66 r
+  dp/fbemux/U2/Y (AND2X1_RVT)              0.05       0.71 r
+  dp/fbemux/U10/Y (NBUFFX16_RVT)           0.08       0.79 r
+  dp/fbemux/U30/Y (AO222X1_RVT)            0.12       0.91 r
+  dp/fbemux/y[0] (mux3_WIDTH32_1)          0.00       0.91 r
+  dp/srcbmux/d0[0] (mux2_WIDTH32_0)        0.00       0.91 r
+  dp/srcbmux/U23/Y (AO21X2_RVT)            0.07       0.98 r
+  dp/srcbmux/y[0] (mux2_WIDTH32_0)         0.00       0.98 r
+  dp/alu/b[0] (alu)                        0.00       0.98 r
+  dp/alu/U127/Y (INVX1_RVT)                0.09       1.07 f
+  dp/alu/U120/Y (OR2X2_RVT)                0.20       1.27 f
+  dp/alu/U425/Y (NBUFFX4_RVT)              0.11       1.38 f
+  dp/alu/U864/Y (NOR2X0_RVT)               0.17       1.55 r
+  dp/alu/U498/Y (NOR4X1_RVT)               0.10       1.66 f
+  dp/alu/U217/Y (AO21X2_RVT)               0.14       1.79 f
+  dp/alu/U175/Y (AO22X1_RVT)               0.11       1.90 f
+  dp/alu/U142/Y (OR2X4_RVT)                0.11       2.01 f
+  dp/alu/U513/Y (NOR2X0_RVT)               0.11       2.12 r
+  dp/alu/U370/Y (OR3X2_RVT)                0.05       2.17 r
+  dp/alu/U278/Y (OR2X1_RVT)                0.04       2.22 r
+  dp/alu/U154/Y (OR4X1_RVT)                0.07       2.29 r
+  dp/alu/U167/Y (OR4X1_RVT)                0.08       2.37 r
+  dp/alu/U138/Y (NOR4X1_RVT)               0.07       2.44 f
+  dp/alu/zero (alu)                        0.00       2.44 f
+  dp/ZeroE (datapath)                      0.00       2.44 f
+  c/ZeroE (controller)                     0.00       2.44 f
+  c/U1/Y (AO21X2_RVT)                      0.10       2.55 f
+  c/PCSrcE (controller)                    0.00       2.55 f
+  hu/PCSrcE (hazard)                       0.00       2.55 f
+  hu/U16/Y (OR2X4_RVT)                     0.15       2.70 f
+  hu/FlushE (hazard)                       0.00       2.70 f
+  dp/FlushE (datapath)                     0.00       2.70 f
+  dp/regE/clear (floprc_WIDTH175)          0.00       2.70 f
+  dp/regE/U7/Y (NBUFFX4_RVT)               0.13       2.83 f
+  dp/regE/U65/Y (OR2X1_RVT)                0.24       3.08 f
+  dp/regE/q_reg[73]/D (DFFASX1_RVT)        0.06       3.13 f
+  data arrival time                                   3.13
+
+  clock clk (rise edge)                    3.30       3.30
+  clock network delay (ideal)              0.00       3.30
+  clock uncertainty                       -0.15       3.15
+  dp/regE/q_reg[73]/CLK (DFFASX1_RVT)      0.00       3.15 r
+  library setup time                      -0.02       3.13
+  data required time                                  3.13
+  -----------------------------------------------------------
+  data required time                                  3.13
+  data arrival time                                  -3.13
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: dp/regE/q_reg[73]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dp/regE/q_reg[73]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv              35000                 saed32rvt_tt1p05v25c
+  hazard             8000                  saed32rvt_tt1p05v25c
+  mux3_WIDTH32_1     ForQA                 saed32rvt_tt1p05v25c
+  datapath           35000                 saed32rvt_tt1p05v25c
+  alu                8000                  saed32rvt_tt1p05v25c
+  floprc_WIDTH175    8000                  saed32rvt_tt1p05v25c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dp/regE/q_reg[73]/CLK (DFFASX1_RVT)      0.00 #     0.00 r
+  dp/regE/q_reg[73]/QN (DFFASX1_RVT)       0.14       0.14 f
+  dp/regE/q[73] (floprc_WIDTH175)          0.00       0.14 f
+  dp/Rs2E[4] (datapath)                    0.00       0.14 f
+  hu/Rs2E[4] (hazard)                      0.00       0.14 f
+  hu/U40/Y (XOR2X1_RVT)                    0.19       0.33 r
+  hu/U29/Y (OR3X2_RVT)                     0.06       0.38 r
+  hu/U11/Y (IBUFFX16_RVT)                  0.06       0.45 f
+  hu/U48/Y (AND4X1_RVT)                    0.10       0.55 f
+  hu/U10/Y (NOR4X1_RVT)                    0.12       0.66 r
+  hu/ForwardBE[0] (hazard)                 0.00       0.66 r
+  dp/ForwardBE[0] (datapath)               0.00       0.66 r
+  dp/fbemux/s[0] (mux3_WIDTH32_1)          0.00       0.66 r
+  dp/fbemux/U2/Y (AND2X1_RVT)              0.05       0.71 r
+  dp/fbemux/U10/Y (NBUFFX16_RVT)           0.08       0.79 r
+  dp/fbemux/U30/Y (AO222X1_RVT)            0.12       0.91 r
+  dp/fbemux/y[0] (mux3_WIDTH32_1)          0.00       0.91 r
+  dp/srcbmux/d0[0] (mux2_WIDTH32_0)        0.00       0.91 r
+  dp/srcbmux/U23/Y (AO21X2_RVT)            0.07       0.98 r
+  dp/srcbmux/y[0] (mux2_WIDTH32_0)         0.00       0.98 r
+  dp/alu/b[0] (alu)                        0.00       0.98 r
+  dp/alu/U127/Y (INVX1_RVT)                0.09       1.07 f
+  dp/alu/U120/Y (OR2X2_RVT)                0.20       1.27 f
+  dp/alu/U425/Y (NBUFFX4_RVT)              0.11       1.38 f
+  dp/alu/U864/Y (NOR2X0_RVT)               0.17       1.55 r
+  dp/alu/U498/Y (NOR4X1_RVT)               0.10       1.66 f
+  dp/alu/U217/Y (AO21X2_RVT)               0.14       1.79 f
+  dp/alu/U175/Y (AO22X1_RVT)               0.11       1.90 f
+  dp/alu/U142/Y (OR2X4_RVT)                0.11       2.01 f
+  dp/alu/U513/Y (NOR2X0_RVT)               0.11       2.12 r
+  dp/alu/U370/Y (OR3X2_RVT)                0.05       2.17 r
+  dp/alu/U278/Y (OR2X1_RVT)                0.04       2.22 r
+  dp/alu/U154/Y (OR4X1_RVT)                0.07       2.29 r
+  dp/alu/U167/Y (OR4X1_RVT)                0.08       2.37 r
+  dp/alu/U138/Y (NOR4X1_RVT)               0.07       2.44 f
+  dp/alu/zero (alu)                        0.00       2.44 f
+  dp/ZeroE (datapath)                      0.00       2.44 f
+  c/ZeroE (controller)                     0.00       2.44 f
+  c/U1/Y (AO21X2_RVT)                      0.10       2.55 f
+  c/PCSrcE (controller)                    0.00       2.55 f
+  hu/PCSrcE (hazard)                       0.00       2.55 f
+  hu/U16/Y (OR2X4_RVT)                     0.15       2.70 f
+  hu/FlushE (hazard)                       0.00       2.70 f
+  dp/FlushE (datapath)                     0.00       2.70 f
+  dp/regE/clear (floprc_WIDTH175)          0.00       2.70 f
+  dp/regE/U7/Y (NBUFFX4_RVT)               0.13       2.83 f
+  dp/regE/U65/Y (OR2X1_RVT)                0.24       3.08 f
+  dp/regE/q_reg[73]/D (DFFASX1_RVT)        0.06       3.13 f
+  data arrival time                                   3.13
+
+  clock clk (rise edge)                    3.30       3.30
+  clock network delay (ideal)              0.00       3.30
+  clock uncertainty                       -0.15       3.15
+  dp/regE/q_reg[73]/CLK (DFFASX1_RVT)      0.00       3.15 r
+  library setup time                      -0.02       3.13
+  data required time                                  3.13
+  -----------------------------------------------------------
+  data required time                                  3.13
+  data arrival time                                  -3.13
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: dp/regE/q_reg[73]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dp/pcreg/q_reg[14]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv              35000                 saed32rvt_tt1p05v25c
+  hazard             8000                  saed32rvt_tt1p05v25c
+  mux3_WIDTH32_1     ForQA                 saed32rvt_tt1p05v25c
+  datapath           35000                 saed32rvt_tt1p05v25c
+  mux2_WIDTH32_0     8000                  saed32rvt_tt1p05v25c
+  alu                8000                  saed32rvt_tt1p05v25c
+  mux2_WIDTH32_1     8000                  saed32rvt_tt1p05v25c
+  flopenr_WIDTH32    8000                  saed32rvt_tt1p05v25c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dp/regE/q_reg[73]/CLK (DFFASX1_RVT)      0.00 #     0.00 r
+  dp/regE/q_reg[73]/QN (DFFASX1_RVT)       0.14       0.14 f
+  dp/regE/q[73] (floprc_WIDTH175)          0.00       0.14 f
+  dp/Rs2E[4] (datapath)                    0.00       0.14 f
+  hu/Rs2E[4] (hazard)                      0.00       0.14 f
+  hu/U40/Y (XOR2X1_RVT)                    0.19       0.33 r
+  hu/U29/Y (OR3X2_RVT)                     0.06       0.38 r
+  hu/U11/Y (IBUFFX16_RVT)                  0.06       0.45 f
+  hu/U48/Y (AND4X1_RVT)                    0.10       0.55 f
+  hu/U10/Y (NOR4X1_RVT)                    0.12       0.66 r
+  hu/ForwardBE[0] (hazard)                 0.00       0.66 r
+  dp/ForwardBE[0] (datapath)               0.00       0.66 r
+  dp/fbemux/s[0] (mux3_WIDTH32_1)          0.00       0.66 r
+  dp/fbemux/U2/Y (AND2X1_RVT)              0.05       0.71 r
+  dp/fbemux/U10/Y (NBUFFX16_RVT)           0.08       0.79 r
+  dp/fbemux/U7/Y (AO21X2_RVT)              0.10       0.89 r
+  dp/fbemux/y[3] (mux3_WIDTH32_1)          0.00       0.89 r
+  dp/srcbmux/d0[3] (mux2_WIDTH32_0)        0.00       0.89 r
+  dp/srcbmux/U18/Y (IBUFFX16_RVT)          0.06       0.95 f
+  dp/srcbmux/U19/Y (OAI21X2_RVT)           0.11       1.06 r
+  dp/srcbmux/y[3] (mux2_WIDTH32_0)         0.00       1.06 r
+  dp/alu/b[3] (alu)                        0.00       1.06 r
+  dp/alu/U805/Y (XOR2X1_RVT)               0.10       1.17 f
+  dp/alu/U118/Y (NOR2X0_RVT)               0.13       1.30 r
+  dp/alu/U206/Y (NOR2X2_RVT)               0.07       1.36 f
+  dp/alu/U507/Y (NAND2X0_RVT)              0.07       1.44 r
+  dp/alu/U232/Y (OAI21X2_RVT)              0.08       1.52 f
+  dp/alu/U182/Y (NBUFFX4_RVT)              0.05       1.57 f
+  dp/alu/U132/Y (AO21X1_RVT)               0.13       1.70 f
+  dp/alu/U693/Y (XOR2X1_RVT)               0.16       1.85 r
+  dp/alu/U1126/Y (OAI22X1_RVT)             0.06       1.92 f
+  dp/alu/U29/Y (OR2X1_RVT)                 0.10       2.02 f
+  dp/alu/U288/Y (OR3X1_RVT)                0.11       2.12 f
+  dp/alu/U1128/Y (OR3X2_RVT)               0.11       2.23 f
+  dp/alu/U135/Y (OR4X2_RVT)                0.13       2.36 f
+  dp/alu/U130/Y (OR4X2_RVT)                0.12       2.49 f
+  dp/alu/U138/Y (NOR4X1_RVT)               0.11       2.60 r
+  dp/alu/zero (alu)                        0.00       2.60 r
+  dp/ZeroE (datapath)                      0.00       2.60 r
+  c/ZeroE (controller)                     0.00       2.60 r
+  c/U1/Y (AO21X2_RVT)                      0.06       2.66 r
+  c/PCSrcE (controller)                    0.00       2.66 r
+  dp/PCSrcE (datapath)                     0.00       2.66 r
+  dp/pcmux/s (mux2_WIDTH32_1)              0.00       2.66 r
+  dp/pcmux/U76/Y (NBUFFX4_RVT)             0.05       2.71 r
+  dp/pcmux/U3/Y (INVX1_RVT)                0.04       2.76 f
+  dp/pcmux/U4/Y (AO22X1_RVT)               0.10       2.85 f
+  dp/pcmux/y[14] (mux2_WIDTH32_1)          0.00       2.85 f
+  dp/pcreg/d[14] (flopenr_WIDTH32)         0.00       2.85 f
+  dp/pcreg/U11/Y (AND2X1_RVT)              0.12       2.97 f
+  dp/pcreg/U12/Y (OR2X1_RVT)               0.11       3.08 f
+  dp/pcreg/q_reg[14]/D (DFFARX1_RVT)       0.06       3.13 f
+  data arrival time                                   3.13
+
+  clock clk (rise edge)                    3.30       3.30
+  clock network delay (ideal)              0.00       3.30
+  clock uncertainty                       -0.15       3.15
+  dp/pcreg/q_reg[14]/CLK (DFFARX1_RVT)     0.00       3.15 r
+  library setup time                      -0.01       3.14
+  data required time                                  3.14
+  -----------------------------------------------------------
+  data required time                                  3.14
+  data arrival time                                  -3.13
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: c/controlregW/q_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dp/pcreg/q_reg[14]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv              35000                 saed32rvt_tt1p05v25c
+  mux3_WIDTH32_0     ForQA                 saed32rvt_tt1p05v25c
+  datapath           35000                 saed32rvt_tt1p05v25c
+  alu                8000                  saed32rvt_tt1p05v25c
+  mux2_WIDTH32_1     8000                  saed32rvt_tt1p05v25c
+  flopenr_WIDTH32    8000                  saed32rvt_tt1p05v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  c/controlregW/q_reg[1]/CLK (DFFARX1_RVT)                0.00 #     0.00 r
+  c/controlregW/q_reg[1]/Q (DFFARX1_RVT)                  0.12       0.12 r
+  c/controlregW/q[1] (flopr_WIDTH3)                       0.00       0.12 r
+  c/ResultSrcW[1] (controller)                            0.00       0.12 r
+  dp/ResultSrcW[1] (datapath)                             0.00       0.12 r
+  dp/resultmux/s[1] (mux3_WIDTH32_0)                      0.00       0.12 r
+  dp/resultmux/U65/Y (NOR2X4_RVT)                         0.08       0.19 f
+  dp/resultmux/U16/Y (NBUFFX4_RVT)                        0.05       0.24 f
+  dp/resultmux/U3/Y (NBUFFX2_RVT)                         0.09       0.33 f
+  dp/resultmux/U14/Y (AO222X1_RVT)                        0.09       0.43 f
+  dp/resultmux/y[10] (mux3_WIDTH32_0)                     0.00       0.43 f
+  dp/U10/Y (NBUFFX8_RVT)                                  0.08       0.51 f
+  dp/fbemux/d1[10] (mux3_WIDTH32_1)                       0.00       0.51 f
+  dp/fbemux/U38/Y (AO222X1_RVT)                           0.35       0.86 f
+  dp/fbemux/y[10] (mux3_WIDTH32_1)                        0.00       0.86 f
+  dp/srcbmux/d0[10] (mux2_WIDTH32_0)                      0.00       0.86 f
+  dp/srcbmux/U63/Y (AO21X1_RVT)                           0.13       0.99 f
+  dp/srcbmux/y[10] (mux2_WIDTH32_0)                       0.00       0.99 f
+  dp/alu/b[10] (alu)                                      0.00       0.99 f
+  dp/alu/U713/Y (XOR2X1_RVT)                              0.18       1.18 f
+  dp/alu/U94/Y (NOR2X0_RVT)                               0.13       1.30 r
+  dp/alu/U803/Y (NOR2X0_RVT)                              0.07       1.37 f
+  dp/alu/U67/Y (AOI21X1_RVT)                              0.11       1.48 r
+  dp/alu/U146/Y (OAI21X2_RVT)                             0.07       1.55 f
+  dp/alu/U157/Y (AO21X2_RVT)                              0.11       1.67 f
+  dp/alu/U186/Y (AO21X2_RVT)                              0.17       1.84 f
+  dp/alu/U168/Y (AND2X2_RVT)                              0.16       2.00 f
+  dp/alu/U149/Y (NOR2X0_RVT)                              0.13       2.13 r
+  dp/alu/U665/Y (OA21X1_RVT)                              0.05       2.18 r
+  dp/alu/U372/Y (OAI21X2_RVT)                             0.07       2.25 f
+  dp/alu/U148/Y (AND2X2_RVT)                              0.10       2.35 f
+  dp/alu/U494/Y (OR4X1_RVT)                               0.14       2.49 f
+  dp/alu/U138/Y (NOR4X1_RVT)                              0.11       2.60 r
+  dp/alu/zero (alu)                                       0.00       2.60 r
+  dp/ZeroE (datapath)                                     0.00       2.60 r
+  c/ZeroE (controller)                                    0.00       2.60 r
+  c/U1/Y (AO21X2_RVT)                                     0.06       2.66 r
+  c/PCSrcE (controller)                                   0.00       2.66 r
+  dp/PCSrcE (datapath)                                    0.00       2.66 r
+  dp/pcmux/s (mux2_WIDTH32_1)                             0.00       2.66 r
+  dp/pcmux/U76/Y (NBUFFX4_RVT)                            0.05       2.71 r
+  dp/pcmux/U3/Y (INVX1_RVT)                               0.04       2.75 f
+  dp/pcmux/U4/Y (AO22X1_RVT)                              0.10       2.85 f
+  dp/pcmux/y[14] (mux2_WIDTH32_1)                         0.00       2.85 f
+  dp/pcreg/d[14] (flopenr_WIDTH32)                        0.00       2.85 f
+  dp/pcreg/U11/Y (AND2X1_RVT)                             0.12       2.97 f
+  dp/pcreg/U12/Y (OR2X1_RVT)                              0.11       3.08 f
+  dp/pcreg/q_reg[14]/D (DFFARX1_RVT)                      0.06       3.13 f
+  data arrival time                                                  3.13
+
+  clock clk (rise edge)                                   3.30       3.30
+  clock network delay (ideal)                             0.00       3.30
+  clock uncertainty                                      -0.15       3.15
+  dp/pcreg/q_reg[14]/CLK (DFFARX1_RVT)                    0.00       3.15 r
+  library setup time                                     -0.01       3.14
+  data required time                                                 3.14
+  --------------------------------------------------------------------------
+  data required time                                                 3.14
+  data arrival time                                                 -3.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
